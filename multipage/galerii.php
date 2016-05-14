@@ -1,0 +1,23 @@
+<?php
+require_once ("head.html")
+?>
+
+
+
+<?php
+
+$files = array_slice(scandir('pildid'), 2);
+
+?>
+
+    <h3>Fotod</h3>
+    <div id="gallery">
+        <?php foreach($files as $id=>$pilt):?>
+            <img src="<?php echo "pildid/".$pilt;?>" alt="<?php echo $pilt;?>"/>
+        <?php endforeach; ?>
+
+    </div>
+
+<?php
+require_once ("foot.html")
+?>
